@@ -22,6 +22,7 @@ export function GalleryGrid({ limit }: { limit?: number }) {
             className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100 text-left shadow-sm"
           >
             <Image
+            
               src={item.src}
               alt={item.alt}
               fill

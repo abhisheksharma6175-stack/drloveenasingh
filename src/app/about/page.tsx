@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "About Dr. Loveena Singh MD | Family Physician Queens & Long Island",
     description:
       "Board-certified family physician providing preventive, patient-centered care across Queens and Long Island. Learn more about Dr. Singh's approach and practice.",
-    url: "https://www.yourpracticesite.com/about",
+    url: "https://allmedurgentcare.net/about",
     siteName: "Dr. Loveena Singh MD",
     images: [
       {
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     images: ["/images/loveena-singh.jpg"],
   },
   alternates: {
-    canonical: "https://www.yourpracticesite.com/about",
+    canonical: "https://www.allmedurgentcare.net/about",
   },
   robots: {
     index: true,
@@ -249,14 +249,11 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              {/* Content column */}
               <div>
-                {/* Mobile Heading */}
                 <div className="hidden lg:block">
-  <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-color">
-    About Dr. Singh
-  </p>
-
+                <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-color">
+                About Dr. Singh
+                </p>
   <h1
     id="about-heading"
     className="text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-[2.6rem]"

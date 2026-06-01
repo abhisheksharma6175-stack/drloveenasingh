@@ -36,7 +36,10 @@ body {
     radial-gradient(circle at 88% 10%, rgba(22, 119, 185, 0.16), transparent 30%),
     linear-gradient(135deg, #ffffff 0%, #eef8ff 48%, #f7fbff 100%);
 }
-
+.logo-one{
+  width: 200px;
+  height: auto;
+}
 .glass-panel {
   border: 1px solid rgba(226, 232, 240, 0.82);
   background: rgba(255, 255, 255, 0.78);

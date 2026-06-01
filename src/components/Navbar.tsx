@@ -16,8 +16,8 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/82 backdrop-blur-xl">
       <nav className="container-shell flex h-20 items-center justify-between" aria-label="Main navigation">
         <Link href="/" className="focus-ring group">
-          <span className="block text-lg font-bold text-slate-950">{site.name}</span>
-          <span className="block text-xs font-medium text-[#1677b9]">{site.practice}</span>
+          
+          <Image src="/images/logo.png" alt={`${site.name} logo`} width={200} height={0} className="logo-one" />
         </Link>
 
         <div className="hidden items-center gap-7 lg:flex">

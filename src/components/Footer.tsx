@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt, FaFax } from "react-icons/fa";
 import { navItems, site } from "@/lib/site";
 
@@ -46,7 +47,7 @@ export function Footer() {
 
           {/* Brand */}
           <div>
-            <p className="text-xl font-bold">{site.name}</p>
+            <Image src="/images/logo.png" alt={`${site.name} logo`} width={200} height={0} className="logo-one" />
             <p className="mt-3 max-w-md text-sm leading-6 text-blue-100/80">
               {site.description}
             </p>

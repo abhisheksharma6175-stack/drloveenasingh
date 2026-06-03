@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Contact Dr. Loveena Singh MD to request a preventive medicine appointment or ask about family medicine services."
+  description: "Contact All Care Family Medicine, PC to request a preventive medicine appointment or ask about family medicine services."
 };
 
 export default function ContactPage() {

@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Script from "next/script";
-import { AnimatedSection } from "@/components/AnimatedSection";
-import { TestimonialsSection } from "@/sections/HomeSections";
 
-/* ─── Full SEO Metadata ─────────────────────────────────────── */
+/* ─── SEO Metadata ─────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: "About Dr. Loveena Singh MD | Board-Certified Family Physician Queens & Long Island",
+  title: "About Us | All Care Family Medicine – Queens & Long Island",
   description:
-    "Meet Dr. Loveena Singh MD, a board-certified family physician specializing in preventive medicine. Serving Richmond Hill, Ozone Park, Queens, and Hicksville with compassionate, prevention-centered care for all ages.",
+    "Learn about All Care Family Medicine — a board-certified family practice delivering prevention-centered, compassionate primary care for patients of all ages across Queens and Long Island, NY.",
   keywords: [
-    "Dr. Loveena Singh",
+    "All Care Family Medicine",
     "family physician Queens",
     "preventive medicine Queens",
     "board-certified family doctor",
@@ -18,37 +16,25 @@ export const metadata: Metadata = {
     "family doctor Hicksville",
     "preventive care Long Island",
     "wellness visits Queens",
-    "medical exams Queens NY",
     "family medicine Ozone Park",
   ],
-  authors: [{ name: "Dr. Loveena Singh MD" }],
-  creator: "Dr. Loveena Singh MD",
   openGraph: {
-    title: "About Dr. Loveena Singh MD | Family Physician Queens & Long Island",
+    title: "About All Care Family Medicine | Queens & Long Island",
     description:
-      "Board-certified family physician providing preventive, patient-centered care across Queens and Long Island. Learn more about Dr. Singh's approach and practice.",
-    url: "https://allmedurgentcare.net/about",
-    siteName: "Dr. Loveena Singh MD",
-    images: [
-      {
-        url: "/images/loveena-singh.jpg",
-        width: 800,
-        height: 1000,
-        alt: "Dr. Loveena Singh MD, board-certified family physician in Queens, NY",
-      },
-    ],
+      "Board-certified family medicine providing preventive, patient-centered care across Queens and Long Island. Learn more about our practice and approach.",
+    url: "https://allcareamyfamilymedicine.com/about",
+    siteName: "All Care Family Medicine",
     locale: "en_US",
-    type: "profile",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Dr. Loveena Singh MD | Family Physician Queens & Long Island",
+    title: "About All Care Family Medicine | Queens & Long Island",
     description:
-      "Meet Dr. Loveena Singh MD — preventive medicine expert serving Queens and Long Island.",
-    images: ["/images/loveena-singh.jpg"],
+      "Prevention-centered family medicine serving Queens and Long Island.",
   },
   alternates: {
-    canonical: "https://www.allmedurgentcare.net/about",
+    canonical: "https://allcarefamilymedicine.com/about",
   },
   robots: {
     index: true,
@@ -63,16 +49,14 @@ export const metadata: Metadata = {
   },
 };
 
-/* ─── JSON-LD structured data ────────────────────────────────── */
-const personSchema = {
+/* ─── JSON-LD structured data ─────────────────────────────── */
+const orgSchema = {
   "@context": "https://schema.org",
-  "@type": "Physician",
-  name: "Dr. Loveena Singh MD",
-  jobTitle: "Board-Certified Family Physician",
+  "@type": "MedicalOrganization",
+  name: "All Care Family Medicine",
   description:
-    "Dr. Loveena Singh is a board-certified family physician focused on accessible, prevention-centered care for patients of all ages across Queens and Long Island, NY.",
-  image: "https://www.yourpracticesite.com/images/loveena-singh.jpg",
-  url: "https://www.yourpracticesite.com/about",
+    "All Care Family Medicine is a board-certified family practice focused on accessible, prevention-centered primary care for patients of all ages across Queens and Long Island, NY.",
+  url: "https://allcarefamilymedicine.com/about",
   medicalSpecialty: "Family Medicine",
   areaServed: [
     { "@type": "City", name: "Richmond Hill" },
@@ -85,141 +69,112 @@ const personSchema = {
     addressRegion: "NY",
     addressCountry: "US",
   },
-  knowsAbout: [
-    "Preventive Medicine",
-    "Family Care",
-    "Medical Examinations",
-    "Vaccinations",
-    "Preventive Screenings",
-    "Wellness Visits",
-  ],
 };
 
-/* ─── Stats data ─────────────────────────────────────────────── */
+/* ─── Data ────────────────────────────────────────────────── */
 const stats = [
   { value: "15+", label: "Years of Experience" },
   { value: "5,000+", label: "Patients Served" },
-  { value: "4", label: "Communities Covered" },
+  { value: "100%", label: "Prevention-Centered Care" },
 ];
 
-/* ─── Services ───────────────────────────────────────────────── */
-const services = [
+const coreValues = [
+  {
+    label: "Listen First",
+    detail: "Your concerns, history, and goals shape every visit.",
+  },
+  {
+    label: "Prevent, Don't Just Treat",
+    detail: "Early detection is always better than late management.",
+  },
+  {
+    label: "Speak Plainly",
+    detail: "No jargon — just clear, actionable guidance you can act on.",
+  },
+];
+
+const approachCards = [
   {
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-5 w-5">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-5 w-5" aria-hidden="true">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+      </svg>
+    ),
+    title: "Patient-Centered",
+    desc: "Every care plan is built around you — your unique history, lifestyle, and health goals, not a generic template.",
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-5 w-5" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" />
+      </svg>
+    ),
+    title: "Proactive, Not Reactive",
+    desc: "We prioritize catching risks early through regular screenings, health tracking, and preventive counseling.",
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-5 w-5" aria-hidden="true">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
     ),
-    title: "Family Care",
-    desc: "Comprehensive care for every stage of life, from children to seniors.",
+    title: "Accessible & Inclusive",
+    desc: "We welcome patients from all backgrounds and ensure healthcare remains approachable for everyone.",
   },
   {
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-5 w-5">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-5 w-5" aria-hidden="true">
         <rect x="8" y="2" width="8" height="4" rx="1" /><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /><path d="M12 11h4" /><path d="M12 16h4" /><path d="M8 11h.01" /><path d="M8 16h.01" />
       </svg>
     ),
-    title: "Medical Exams",
-    desc: "Annual physicals, DOT exams, and employment health clearances.",
-  },
-  {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-5 w-5">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      </svg>
-    ),
-    title: "Preventive Visits",
-    desc: "Early risk detection, screenings, vaccines, and wellness planning.",
-  },
-  {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-5 w-5">
-        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-      </svg>
-    ),
-    title: "Chronic Care",
-    desc: "Ongoing management and follow-up for long-term health conditions.",
-  },
-  {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-5 w-5">
-        <circle cx="12" cy="12" r="10" /><path d="M8 14s1.5 2 4 2 4-2 4-2" /><line x1="9" y1="9" x2="9.01" y2="9" /><line x1="15" y1="9" x2="15.01" y2="9" />
-      </svg>
-    ),
-    title: "Patient Education",
-    desc: "Clear explanations and practical guidance so you understand your health.",
-  },
-  {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="h-5 w-5">
-        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" />
-      </svg>
-    ),
-    title: "Community Focus",
-    desc: "Serving Richmond Hill, Ozone Park, Queens, and Hicksville families.",
+    title: "Evidence-Based Practice",
+    desc: "All treatment decisions follow current clinical guidelines and the latest medical evidence — no guesswork.",
   },
 ];
 
-/* ─── Values ─────────────────────────────────────────────────── */
-const values = [
-  { label: "Listen First", detail: "Every visit starts with understanding you — your concerns, history, and goals." },
-  { label: "Prevent, Don't Just Treat", detail: "Catching issues early is always better than managing them later." },
-  { label: "Speak Plainly", detail: "Medical jargon stays out; clear, actionable guidance comes in." },
-];
+const locations = ["Richmond Hill", "Ozone Park", "Queens", "Hicksville"];
 
-/* ─── Page ───────────────────────────────────────────────────── */
+/* ─── Page ────────────────────────────────────────────────── */
 export default function AboutPage() {
   return (
     <>
-      {/* Structured data for Google */}
       <Script
-        id="person-schema"
+        id="org-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         strategy="afterInteractive"
       />
 
       <main>
-        {/* ── Hero / Intro ── */}
-        <AnimatedSection
+        {/* ── Hero ── */}
+        <section
           aria-labelledby="about-heading"
           className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/40 to-white px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-20"
         >
-          {/* Decorative blob */}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -right-32 -top-32 h-[500px] w-[500px] rounded-full bg-blue-100/50 blur-3xl"
-          />
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -bottom-24 -left-24 h-[400px] w-[400px] rounded-full bg-sky-100/40 blur-3xl"
-          />
+          {/* Decorative blobs */}
+          <div aria-hidden="true" className="pointer-events-none absolute -right-32 -top-32 h-[500px] w-[500px] rounded-full bg-blue-100/50 blur-3xl" />
+          <div aria-hidden="true" className="pointer-events-none absolute -bottom-24 -left-24 h-[400px] w-[400px] rounded-full bg-sky-100/40 blur-3xl" />
 
           <div className="relative mx-auto max-w-7xl">
 
-  {/* Mobile Heading */}
-  <div className="mb-10 lg:hidden">
-    <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-color">
-      About Dr. Singh
-    </p>
+            {/* Mobile heading */}
+            <div className="mb-10 lg:hidden">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-blue-600">
+                About Us
+              </p>
+              <h1 className="text-3xl font-bold leading-tight tracking-tight text-slate-900">
+                Trusted family medicine{" "}
+                <span className="italic text-blue-600">rooted in prevention.</span>
+              </h1>
+            </div>
 
-    <h1 className="text-3xl font-bold leading-tight tracking-tight text-slate-900">
-      Compassionate preventive medicine with{" "}
-      <span className="text-color">clear communication.</span>
-    </h1>
-  </div>
-
-  <div className="grid items-center gap-12 lg:grid-cols-[5fr_6fr] lg:gap-20">
+            <div className="grid items-center gap-12 lg:grid-cols-[5fr_6fr] lg:gap-20">
 
               {/* Photo column */}
-              
-<div className="relative mx-auto w-full max-w-sm lg:max-w-none">
-                {/* Decorative ring */}
-                <div
-                  aria-hidden="true"
-                  className="absolute -inset-3 rounded-[2.25rem] border-2 border-blue-200/60"
-                />
-                {/* Accent badge */}
+              <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
+                <div aria-hidden="true" className="absolute -inset-3 rounded-[2.25rem] border-2 border-blue-200/60" />
+
+                {/* Board certified badge */}
                 <div className="absolute -bottom-5 -right-4 z-10 flex items-center gap-2 rounded-2xl border border-blue-100 bg-white px-4 py-3 shadow-lg shadow-blue-950/8 sm:-right-6">
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} className="h-4 w-4" aria-hidden="true">
@@ -234,50 +189,49 @@ export default function AboutPage() {
 
                 <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-2xl shadow-blue-950/15">
                   <Image
-                    src="/images/loveena-singh.jpg"
-                    alt="Dr. Loveena Singh MD, board-certified family physician serving Queens and Long Island, NY"
+                    src="/images/about.jpg"
+                    alt="All Care Family Medicine practice — compassionate primary care in Queens and Long Island, NY"
                     fill
                     priority
                     sizes="(min-width: 1024px) 42vw, (min-width: 640px) 70vw, 92vw"
                     className="object-cover"
                   />
-                  {/* Subtle gradient overlay at bottom */}
-                  <div
-                    aria-hidden="true"
-                    className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-slate-900/30 to-transparent"
-                  />
+                  <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-slate-900/30 to-transparent" />
                 </div>
               </div>
 
+              {/* Copy column */}
               <div>
+                {/* Desktop heading */}
                 <div className="hidden lg:block">
-                <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-color">
-                About Dr. Singh
-                </p>
-  <h1
-    id="about-heading"
-    className="text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-[2.6rem]"
-  >
-    Compassionate preventive medicine with{" "}
-    <span className="text-color">clear communication.</span>
-  </h1>
-</div>
-                <p className="mt-5 text-lg leading-relaxed text-slate-600">
-                  Dr. Loveena Singh is a board-certified family physician focused on accessible, prevention-centered care for patients of all ages across Queens and Long Island.
-                </p>
-
-                <div className="mt-7 space-y-4 text-base leading-8 text-slate-600">
-                  <p>
-                    Her approach combines preventive care, careful listening, early risk recognition, and practical next steps — so patients feel fully informed before they leave the office.
+                  <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-blue-600">
+                    About Us
                   </p>
-                  <p>
-                    The practice supports wellness visits, medical exams, vaccinations, testing, preventive screenings, and follow-up care for families in Richmond Hill, Ozone Park, Queens, and Hicksville.
-                  </p>
+                  <h1
+                    id="about-heading"
+                    className="text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-[2.6rem]"
+                  >
+                    Trusted family medicine{" "}
+                    <span className="italic text-blue-600">rooted in prevention.</span>
+                  </h1>
                 </div>
 
-                {/* Values list */}
-                <ul className="mt-8 space-y-3" role="list" aria-label="Dr. Singh's core practice values">
-                  {values.map((v) => (
+                {/* Mission quote */}
+                <blockquote className="mt-6 border-l-4 border-blue-600 bg-blue-50/60 py-4 pl-5 pr-4 text-[15px] italic leading-relaxed text-slate-600">
+                  "At All Care Family Medicine, we believe exceptional healthcare begins with listening — and that the best outcomes come from catching problems before they become crises."
+                </blockquote>
+
+                <p className="mt-5 text-lg leading-relaxed text-slate-600">
+                  We provide compassionate, evidence-based primary care for patients of all ages. Our practice is built on long-term relationships, proactive wellness planning, and clear communication every step of the way.
+                </p>
+
+                {/* Core value bullets */}
+                <ul
+                  className="mt-8 space-y-3"
+                  role="list"
+                  aria-label="Core practice values"
+                >
+                  {coreValues.map((v) => (
                     <li key={v.label} className="flex items-start gap-3">
                       <span
                         aria-hidden="true"
@@ -293,11 +247,11 @@ export default function AboutPage() {
                   ))}
                 </ul>
 
-                {/* CTA */}
+                {/* CTAs */}
                 <div className="mt-10 flex flex-wrap gap-3">
                   <a
                     href="/appointment"
-                    className="inline-flex items-center gap-2 rounded-xl bg-[#1677b9] px-6 py-3 text-sm font-semibold text-white shadow-md shadow-blue-600/20 transition hover:bg-blue-700 hover:shadow-blue-600/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                    className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-blue-600/20 transition hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                   >
                     Book an Appointment
                     <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4" aria-hidden="true">
@@ -314,12 +268,60 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </AnimatedSection>
-        
+        </section>
+
+        {/* ── Stats strip ── */}
+        <section
+          aria-label="Practice highlights"
+          className="border-y border-slate-100 bg-white"
+        >
+          <div className="mx-auto max-w-7xl divide-x divide-slate-100">
+            <dl className="grid grid-cols-3 divide-x divide-slate-100">
+              {stats.map((s) => (
+                <div key={s.label} className="px-8 py-10 text-center">
+                  <dt className="text-sm text-slate-500">{s.label}</dt>
+                  <dd className="mt-1 text-4xl font-bold text-blue-600">{s.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </section>
+
+        {/* ── Our approach ── */}
+        <section
+          aria-labelledby="approach-heading"
+          className="bg-slate-50 px-4 py-16 sm:px-6 sm:py-20 lg:px-8"
+        >
+          <div className="mx-auto max-w-7xl">
+            <h2
+              id="approach-heading"
+              className="mb-10 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
+            >
+              Our approach to care
+            </h2>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {approachCards.map((card) => (
+                <div
+                  key={card.title}
+                  className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm"
+                >
+                  <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+                    {card.icon}
+                  </span>
+                  <h3 className="mb-2 text-base font-semibold text-slate-900">
+                    {card.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-slate-600">{card.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ── Locations strip ── */}
         <section
           aria-labelledby="locations-heading"
-          className="bg-[#1677b9] px-4 py-14 sm:px-6 sm:py-16 lg:px-8"
+          className="bg-blue-600 px-4 py-14 sm:px-6 sm:py-16 lg:px-8"
         >
           <div className="mx-auto max-w-7xl">
             <div className="flex flex-col items-center gap-8 text-center md:flex-row md:justify-between md:text-left">
@@ -327,7 +329,10 @@ export default function AboutPage() {
                 <p className="text-sm font-semibold uppercase tracking-widest text-blue-200">
                   Serving New York
                 </p>
-                <h2 id="locations-heading" className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+                <h2
+                  id="locations-heading"
+                  className="mt-2 text-2xl font-bold text-white sm:text-3xl"
+                >
                   Patients from across Queens &amp; Long Island
                 </h2>
               </div>
@@ -336,7 +341,7 @@ export default function AboutPage() {
                 role="list"
                 aria-label="Service locations"
               >
-                {["Richmond Hill", "Ozone Park", "Queens", "Hicksville"].map((loc) => (
+                {locations.map((loc) => (
                   <li
                     key={loc}
                     className="rounded-full border border-blue-400/60 bg-blue-500/50 px-5 py-2 text-sm font-medium text-white backdrop-blur-sm"
@@ -348,9 +353,6 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-
-        {/* ── Testimonials ── */}
-        <TestimonialsSection />
       </main>
     </>
   );

@@ -5,14 +5,15 @@ import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.drloveenasingh.com"),
+  metadataBase: new URL("https://allcarefamilymedicine.com"),
   title: {
-    default: "Dr. Loveena Singh MD | Family Medicine in Queens & Long Island",
-    template: "%s | Dr. Loveena Singh MD"
+    default: "All Care Family Medicine, PC | Queens & Long Island",
+    template: "%s | All Care Family Medicine, PC"
   },
   description:
     "Modern preventive medicine and family care for adults, children, and families across Queens, Ozone Park, Richmond Hill, and Hicksville.",
   keywords: [
+    "All Care Family Medicine",
     "Dr Loveena Singh",
     "Preventive Medicine Queens",
     "Family Medicine Queens",
@@ -21,17 +22,17 @@ export const metadata: Metadata = {
     "TLC CDL Medical Exam"
   ],
   openGraph: {
-    title: "Dr. Loveena Singh MD | Family Medicine",
+    title: "All Care Family Medicine, PC | Queens & Long Island",
     description:
       "Board-certified family physician providing compassionate preventive medicine, wellness visits, physicals, vaccinations, screenings, and medical exams.",
-    url: "https://www.drloveenasingh.com",
-    siteName: "Dr. Loveena Singh MD",
+    url: "https://allcarefamilymedicine.com",
+    siteName: "All Care Family Medicine, PC",
     images: [
       {
         url: "/images/loveena-singh.jpg",
         width: 1024,
         height: 1024,
-        alt: "Dr. Loveena Singh premium medical website"
+        alt: "All Care Family Medicine, PC"
       }
     ],
     locale: "en_US",

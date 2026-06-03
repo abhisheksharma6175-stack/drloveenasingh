@@ -7,7 +7,7 @@ import { posts } from "@/data/blog";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Helpful primary care articles from Dr. Loveena Singh MD."
+  description: "Helpful primary care articles from All Care Family Medicine, PC."
 };
 
 export default function BlogPage() {

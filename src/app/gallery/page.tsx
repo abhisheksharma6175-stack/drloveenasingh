@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Gallery",
-  description: "Explore a premium visual gallery for Dr. Loveena Singh's family medicine practice."
+  description: "Explore the welcoming care environment at All Care Family Medicine, PC."
 };
 
 export default function GalleryPage() {

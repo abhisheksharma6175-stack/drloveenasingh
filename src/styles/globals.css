@@ -51,7 +51,7 @@ body {
   padding-block: clamp(4rem, 8vw, 4rem);
 }
 .text-color{
-  color:#1677b9;
+  color:#1677b9 !important;
 }
 .container-shell {
   width: min(1120px, calc(100% - 2rem));

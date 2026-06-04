@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { ContactForm } from "@/components/ContactForm";
+import { PageBanner } from "@/components/PageBanner";
 import { SectionHeading } from "@/components/SectionHeading";
 import { site } from "@/lib/site";
 
@@ -12,8 +13,10 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <AnimatedSection className="section-padding bg-white">
-      <div className="container-shell grid gap-10 lg:grid-cols-[0.86fr_1fr]">
+    <main>
+      <PageBanner title="Contact" imageSrc="/images/medical-room.jpg" />
+      <AnimatedSection className="section-padding bg-white">
+        <div className="container-shell grid gap-10 lg:grid-cols-[0.86fr_1fr]">
         <SectionHeading
           align="left"
           eyebrow="Contact"
@@ -38,6 +41,7 @@ export default function ContactPage() {
           <ContactForm />
         </div>
       </div>
-    </AnimatedSection>
+      </AnimatedSection>
+    </main>
   );
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { GalleryGrid } from "@/components/GalleryGrid";
+import { PageBanner } from "@/components/PageBanner";
 import { SectionHeading } from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
@@ -10,8 +11,10 @@ export const metadata: Metadata = {
 
 export default function GalleryPage() {
   return (
-    <AnimatedSection className="section-padding bg-white">
-      <div className="container-shell">
+    <main>
+      <PageBanner title="Gallery" imageSrc="/images/environment.webp" />
+      <AnimatedSection className="section-padding bg-white">
+        <div className="container-shell">
         <SectionHeading
           eyebrow="Gallery"
           title="A brighter, more welcoming care environment."
@@ -21,6 +24,7 @@ export default function GalleryPage() {
           <GalleryGrid />
         </div>
       </div>
-    </AnimatedSection>
+      </AnimatedSection>
+    </main>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { PageBanner } from "@/components/PageBanner";
 import { SectionHeading } from "@/components/SectionHeading";
 import { posts } from "@/data/blog";
 
@@ -12,8 +13,10 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   return (
-    <AnimatedSection className="section-padding bg-[#f8fbff]">
-      <div className="container-shell">
+    <main>
+      <PageBanner title="Blog" imageSrc="/images/care.jpg" />
+      <AnimatedSection className="section-padding bg-[#f8fbff]">
+        <div className="container-shell">
         <SectionHeading
           eyebrow="Blog"
           title="SEO-friendly health education for patients."
@@ -34,6 +37,7 @@ export default function BlogPage() {
           ))}
         </div>
       </div>
-    </AnimatedSection>
+      </AnimatedSection>
+    </main>
   );
 }

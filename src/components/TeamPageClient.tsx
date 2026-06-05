@@ -162,12 +162,12 @@ export function TeamPageClient() {
                       </button>
                     )}
 
-                    <Link
+                    {/* <Link
                       href="/contact"
                       className="focus-ring inline-flex rounded-full bg-[#1677b9] px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-blue-900/15 transition hover:bg-[#075985]"
                     >
                       Contact the Practice
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </article>

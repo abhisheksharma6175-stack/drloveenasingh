@@ -102,10 +102,6 @@ export function Footer() {
   );
 }
 
-/* ─────────────────────────────────────────────
-   Tabbed location map widget (client component)
-───────────────────────────────────────────── */
-
 import { useState } from "react";
 
 function LocationMapWidget() {

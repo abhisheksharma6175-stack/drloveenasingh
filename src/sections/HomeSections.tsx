@@ -18,7 +18,6 @@ import { posts } from "@/data/blog";
 import { services } from "@/data/services";
 import { site } from "@/lib/site";
 
-
 // ================= ABOUT =================
 
 export function AboutPreview() {
@@ -57,7 +56,6 @@ export function AboutPreview() {
   );
 }
 
-
 // ================= SERVICES =================
 
 export function ServicesPreview() {
@@ -81,7 +79,6 @@ export function ServicesPreview() {
     </AnimatedSection>
   );
 }
-
 
 // ================= WHY CHOOSE US =================
 
@@ -156,7 +153,6 @@ export function WhyChooseUs() {
   );
 }
 
-
 // ================= APPOINTMENT CTA =================
 
 export function AppointmentCta() {
@@ -194,7 +190,6 @@ export function AppointmentCta() {
   );
 }
 
-
 // ================= TESTIMONIALS =================
 
 export function TestimonialsSection() {
@@ -217,7 +212,6 @@ export function TestimonialsSection() {
     </AnimatedSection>
   );
 }
-
 
 // ================= GALLERY =================
 
@@ -251,7 +245,6 @@ export function GalleryPreview() {
     </AnimatedSection>
   );
 }
-
 
 // ================= FAQ =================
 
@@ -331,7 +324,6 @@ export function FaqSection() {
   );
 }
 
-
 // ================= BLOG PREVIEW WITH IMAGE =================
 
 export function BlogPreview() {
@@ -400,7 +392,6 @@ export function BlogPreview() {
     </AnimatedSection>
   );
 }
-
 
 // ================= CONTACT =================
 

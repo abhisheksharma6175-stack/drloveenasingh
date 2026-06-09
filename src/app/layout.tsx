@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "All Care Family Medicine, PC",
     images: [
       {
-        url: "/images/loveena-singh.jpg",
+        url: "/images/environment.jpg",
         width: 1024,
         height: 1024,
         alt: "All Care Family Medicine, PC"

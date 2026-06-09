@@ -6,6 +6,7 @@ import { FaChevronLeft, FaChevronRight, FaQuoteLeft, FaStar } from "react-icons/
 import { testimonials } from "@/data/testimonials";
 
 export function TestimonialCarousel() {
+  
   const [index, setIndex] = useState(0);
   const testimonial = testimonials[index];
   const stars = useMemo(() => Array.from({ length: 5 }), []);

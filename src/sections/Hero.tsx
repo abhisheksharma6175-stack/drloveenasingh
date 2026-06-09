@@ -2,197 +2,196 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FaAward, FaMapMarkerAlt, FaUserMd, FaCalendarCheck, FaStar } from "react-icons/fa";
-import { CtaButton } from "@/components/CtaButton";
+import Link from "next/link";
+import {
+  FaAward,
+  FaMapMarkerAlt,
+  FaUserMd,
+  FaCalendarCheck,
+  FaStar,
+  FaArrowRight,
+} from "react-icons/fa";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
   animate: { opacity: 1, y: 0 },
   transition: {
     duration: 0.7,
-    ease: [0.25, 0.1, 0.25, 1] as const,
     delay,
   },
 });
+
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-sky-50 via-white to-blue-50">
-      {/* Subtle background decoration */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-32 -right-32 h-[480px] w-[480px] rounded-full bg-blue-100/40 blur-3xl"
+    <section className="relative min-h-screen overflow-hidden">
+      {/* Background Image */}
+      <Image
+        src="/images/home-banner.jpg"
+        alt="Healthcare Banner"
+        fill
+        priority
+        className="object-cover"
       />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute bottom-0 left-0 h-64 w-64 rounded-full bg-sky-100/50 blur-2xl"
-      />
 
-      <div className="container-shell relative grid min-h-[calc(100vh-5rem)] items-center gap-12 py-16 lg:grid-cols-[1fr_0.88fr]">
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/55" />
 
-        {/* ── Left column ── */}
-        <div className="flex flex-col">
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/60 to-transparent" />
 
-          {/* Badge */}
-          <motion.div {...fadeUp(0)}>
-            <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-widest text-[#075985] shadow-sm">
-              <FaAward className="text-[#1677b9]" aria-hidden />
-              Preventive medicine &amp; family care
-            </div>
-          </motion.div>
+      {/* Content */}
+      <div className="relative z-10 container-shell flex min-h-screen items-center py-20">
+        <div className="grid w-full gap-16 lg:grid-cols-[1fr_0.9fr]">
 
-          {/* Headline */}
-          <motion.h1
-            {...fadeUp(0.1)}
-            className="mt-6 font-[var(--font-serif)] text-4xl font-semibold leading-[1.08] text-slate-950 sm:text-5xl lg:text-[3.4rem]"
-          >
-            Preventive medicine that helps families{" "}
-            <span className="relative inline-block text-[#075985]">
-              stay ahead
-              <svg
-                aria-hidden
-                className="absolute -bottom-1 left-0 w-full"
-                viewBox="0 0 200 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2 6 C40 2, 100 2, 198 5"
-                  stroke="#38bdf8"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </span>{" "}
-            of their health.
-          </motion.h1>
+          {/* LEFT CONTENT */}
+          <div className="flex flex-col justify-center">
 
-          {/* Body */}
-          <motion.p
-            {...fadeUp(0.2)}
-            className="mt-6 max-w-xl text-[1.05rem] leading-relaxed text-slate-600"
-          >
-            Dr. Loveena Singh provides annual wellness visits, screenings,
-            vaccinations, medical exams, and ongoing prevention-focused care for
-            patients across Queens and Long Island.
-          </motion.p>
-
-          {/* CTA row */}
-          <motion.div
-            {...fadeUp(0.3)}
-            className="mt-8 flex flex-col gap-3 sm:flex-row"
-          >
-            <CtaButton href="/contact">
-              <FaCalendarCheck aria-hidden className="mr-2 inline-block" />
-              Book an Appointment
-            </CtaButton>
-            <CtaButton href="/services" variant="secondary">
-              Explore Services 
-            </CtaButton>
-          </motion.div>
-
-          {/* Stat cards */}
-          <motion.div
-            {...fadeUp(0.4)}
-            className="mt-9 grid gap-3 sm:grid-cols-3"
-          >
-            {[
-              {
-                icon: <FaUserMd className="text-[#1677b9]" aria-hidden />,
-                label: "Patients",
-                value: "Prevention for all ages",
-              },
-              {
-                icon: <FaMapMarkerAlt className="text-[#1677b9]" aria-hidden />,
-                label: "Locations",
-                value: "Queens & Hicksville",
-              },
-              {
-                icon: <FaStar className="text-[#1677b9]" aria-hidden />,
-                label: "Approach",
-                value: "Holistic family care",
-              },
-            ].map((s) => (
-              <div
-                key={s.label}
-                className="glass-panel flex flex-col gap-1.5 rounded-2xl p-4"
-              >
-                <div className="flex items-center gap-2">
-                  {s.icon}
-                  <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-400">
-                    {s.label}
-                  </span>
-                </div>
-                <p className="text-sm font-semibold text-slate-900">{s.value}</p>
+            {/* Badge */}
+            <motion.div {...fadeUp(0)}>
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2 backdrop-blur-md">
+                <FaAward className="text-cyan-300" />
+                <span className="text-sm font-medium text-white">
+                  Preventive Medicine & Family Care
+                </span>
               </div>
-            ))}
-          </motion.div>
-        </div>
+            </motion.div>
 
-        {/* ── Right column — photo ── */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.97 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.85, delay: 0.18, ease: "easeOut" }}
-          className="relative mx-auto w-full max-w-[500px]"
-        >
-          {/* Glow halo */}
-          <div
-            aria-hidden
-            className="absolute -inset-5 rounded-[2.5rem] bg-gradient-to-br from-blue-200/60 to-sky-100/40 blur-2xl"
-          />
+            {/* Heading */}
+            <motion.h1
+              {...fadeUp(0.1)}
+              className="mt-8 max-w-4xl text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl"
+            >
+              Preventive Healthcare
+              <br />
+              <span className="italic text-cyan-300">
+                For Every Stage
+              </span>
+              <br />
+              Of Life
+            </motion.h1>
 
-          {/* Photo frame */}
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-white/80 bg-white shadow-2xl shadow-blue-950/10">
-            <Image
-              src="/images/loveena-singh.jpg"
-              alt="Dr. Loveena Singh in a modern clinical setting"
-              fill
-              priority
-              sizes="(min-width: 1024px) 42vw, 92vw"
-              className="object-cover"
-            />
+            {/* Description */}
+            <motion.p
+              {...fadeUp(0.2)}
+              className="mt-6 max-w-xl text-lg leading-relaxed text-slate-200"
+            >
+              Dr. Loveena Singh provides annual wellness visits,
+              screenings, vaccinations, medical exams, and
+              prevention-focused care for patients across
+              Queens and Long Island.
+            </motion.p>
+
+            {/* Buttons */}
+            <motion.div
+              {...fadeUp(0.3)}
+              className="mt-8 flex flex-wrap gap-4"
+            >
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-3 rounded-full bg-cyan-400 px-7 py-4 font-semibold text-slate-950 transition hover:bg-cyan-300"
+              >
+                <FaCalendarCheck />
+                Book Appointment
+              </Link>
+
+              <Link
+                href="/services"
+                className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-7 py-4 font-semibold text-white backdrop-blur-md transition hover:bg-white/20"
+              >
+                Explore Services
+              </Link>
+            </motion.div>
+
+            {/* Stats */}
+            <motion.div
+              {...fadeUp(0.4)}
+              className="mt-12 grid gap-4 sm:grid-cols-3"
+            >
+              <div className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur-md">
+                <FaUserMd className="mb-3 text-2xl text-cyan-300" />
+                <p className="text-xs uppercase tracking-wider text-slate-300">
+                  Patients
+                </p>
+                <h4 className="mt-1 font-semibold text-white">
+                  Prevention For All Ages
+                </h4>
+              </div>
+
+              <div className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur-md">
+                <FaMapMarkerAlt className="mb-3 text-2xl text-cyan-300" />
+                <p className="text-xs uppercase tracking-wider text-slate-300">
+                  Locations
+                </p>
+                <h4 className="mt-1 font-semibold text-white">
+                  Queens & Hicksville
+                </h4>
+              </div>
+
+              <div className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur-md">
+                <FaStar className="mb-3 text-2xl text-cyan-300" />
+                <p className="text-xs uppercase tracking-wider text-slate-300">
+                  Approach
+                </p>
+                <h4 className="mt-1 font-semibold text-white">
+                  Holistic Family Care
+                </h4>
+              </div>
+            </motion.div>
           </div>
 
-          {/* Floating trust badge — top left */}
-          <motion.div
-            initial={{ opacity: 0, x: -16 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.55 }}
-            className="glass-panel absolute -left-5 top-10 flex items-center gap-3 rounded-2xl px-4 py-3 shadow-lg shadow-blue-950/8"
-          >
-            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-emerald-50">
-              <FaCalendarCheck className="text-emerald-600" aria-hidden />
-            </div>
-            <div>
-              <p className="text-xs font-bold text-slate-900">Accepting patients</p>
-              <p className="text-[11px] text-slate-500">New &amp; existing welcome</p>
-            </div>
-          </motion.div>
+          {/* RIGHT SIDE */}
+          <div className="relative hidden lg:flex items-center justify-center">
 
-          {/* Floating info card — bottom */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.65 }}
-            className="glass-panel absolute -bottom-6 left-4 right-4 rounded-2xl p-4 shadow-xl shadow-blue-950/10 sm:left-auto sm:w-72"
-          >
-            <div className="flex items-start gap-3">
-              <div className="flex h-9 w-9 shrink-0 items-center justify-content rounded-full bg-blue-50">
-                <FaAward className="mx-auto text-[#1677b9]" aria-hidden />
+            {/* Main Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="relative h-[650px] w-[450px] overflow-hidden rounded-[32px] border border-white/20 shadow-2xl">
+                <Image
+                  src="/images/loveena-singh.jpg"
+                  alt="Dr Loveena Singh"
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <div>
-                <p className="text-sm font-bold text-slate-950">
-                  Wellness &amp; screening visits
-                </p>
-                <p className="mt-0.5 text-xs leading-relaxed text-slate-500">
-                  Call for preventive care availability at Queens and Long Island
-                  offices.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </motion.div>
 
+              {/* Floating Card 1 */}
+              <div className="absolute -left-16 top-16 rounded-3xl bg-white p-5 shadow-xl">
+                <p className="text-xs text-slate-500">
+                  ACCEPTING PATIENTS
+                </p>
+                <h3 className="mt-2 text-xl font-bold text-slate-900">
+                  New Patients Welcome
+                </h3>
+              </div>
+
+              {/* Floating Card 2 */}
+              <div className="absolute -right-10 bottom-24 rounded-3xl bg-white p-5 shadow-xl">
+                <div className="flex items-center gap-3">
+                  <div className="rounded-full bg-emerald-100 p-3">
+                    <FaCalendarCheck className="text-emerald-600" />
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold text-slate-900">
+                      Wellness Visits
+                    </h4>
+                    <p className="text-sm text-slate-500">
+                      Annual Health Screenings
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating Card 3 */}
+            </motion.div>
+
+          </div>
+
+        </div>
       </div>
     </section>
   );

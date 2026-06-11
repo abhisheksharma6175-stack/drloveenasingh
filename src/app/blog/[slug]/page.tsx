@@ -38,6 +38,15 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
+  const content = post.content as Array<
+    | string
+    | { type: "heading"; text: string }
+    | { type: "lead"; text: string }
+    | { type: "text"; text: string }
+    | { type: "list"; items: string[] }
+    | { type: "callout"; text: string }
+  >;
+
   return (
     <article className="bg-white">
       <div className="container-shell section-padding max-w-4xl">
@@ -51,12 +60,49 @@ export default async function BlogPostPage({ params }: Props) {
         <div className="relative mt-10 aspect-[16/9] overflow-hidden rounded-3xl">
           <Image src={post.image} alt="" fill priority sizes="(min-width: 768px) 768px, 100vw" className="object-cover" />
         </div>
-        <div className="prose prose-slate mt-10 max-w-none">
-          {post.content.map((paragraph) => (
-            <p key={paragraph} className="text-lg leading-8 text-slate-700">
-              {paragraph}
-            </p>
-          ))}
+        <div className="mt-10 space-y-6">
+          {content.map((block, index) => {
+            if (typeof block === "string" || block.type === "text") {
+              const text = typeof block === "string" ? block : block.text;
+              return (
+                <p key={`${index}-${text}`} className="text-lg leading-8 text-slate-700">
+                  {text}
+                </p>
+              );
+            }
+
+            if (block.type === "lead") {
+              return (
+                <p key={`${index}-${block.text}`} className="text-xl leading-8 text-slate-600">
+                  {block.text}
+                </p>
+              );
+            }
+
+            if (block.type === "heading") {
+              return (
+                <h2 key={`${index}-${block.text}`} className="pt-2 font-[var(--font-serif)] text-2xl font-semibold text-slate-950">
+                  {block.text}
+                </h2>
+              );
+            }
+
+            if (block.type === "list") {
+              return (
+                <ul key={`${index}-${block.items.join("-")}`} className="list-disc space-y-2 pl-6 text-lg leading-8 text-slate-700">
+                  {block.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              );
+            }
+
+            return (
+              <div key={`${index}-${block.text}`} className="rounded-2xl border border-[#cde5f3] bg-[#f3f9fd] p-6">
+                <p className="text-lg leading-8 text-slate-700">{block.text}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </article>

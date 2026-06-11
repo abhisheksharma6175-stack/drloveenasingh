@@ -68,7 +68,6 @@ export function ServicesPreview() {
           title="Preventive care, organized around real patient needs."
           description="From annual wellness visits and screenings to required medical exams, the practice is designed to make prevention clear, efficient, and personal."
         />
-
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <ServiceCard key={service.title} {...service} />
@@ -81,6 +80,7 @@ export function ServicesPreview() {
 }
 
 // ================= WHY CHOOSE US =================
+
 
 export function WhyChooseUs() {
 

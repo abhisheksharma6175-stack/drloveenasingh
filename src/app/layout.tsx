@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://allcarefamilymedicine.com"),
+  metadataBase: new URL("https://drloveenasingh.vercel.app/"),
   title: {
     default: "All Care Family Medicine, PC | Queens & Long Island",
     template: "%s | All Care Family Medicine, PC"
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "All Care Family Medicine, PC | Queens & Long Island",
     description:
       "Board-certified family physician providing compassionate preventive medicine, wellness visits, physicals, vaccinations, screenings, and medical exams.",
-    url: "https://allcarefamilymedicine.com",
+    url: "https://drloveenasingh.vercel.app/",
     siteName: "All Care Family Medicine, PC",
     images: [
       {

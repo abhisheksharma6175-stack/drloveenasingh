@@ -7,7 +7,7 @@ export const site = {
   email: "allcarefm@gmail.com",
   address: "112-20 Liberty Ave, Richmond Hill, NY 11419",
   hours: "Mon, Tue, Thu, Fri: 9:00 AM - 5:00 PM",
-  url: "https://allcarefamilymedicine.com"
+  url: "https://drloveenasingh.vercel.app/"
 };
 
 export const navItems = [

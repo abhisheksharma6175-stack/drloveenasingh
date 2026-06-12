@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import { site } from "@/lib/site";
 
 /* ─── SEO Metadata ─────────────────────────────────────────── */
 export const metadata: Metadata = {
-  title: "About Us | All Care Family Medicine – Queens & Long Island",
+  metadataBase: new URL(site.url),
+  title: "About Us",
   description:
-    "Learn about All Care Family Medicine — a board-certified family practice delivering prevention-centered, compassionate primary care for patients of all ages across Queens and Long Island, NY.",
+    "Learn about All Care Family Medicine, PC, a board-certified family practice delivering prevention-centered, compassionate primary care for patients of all ages across Queens and Long Island, NY.",
   keywords: [
     "All Care Family Medicine",
     "family physician Queens",
@@ -20,22 +22,24 @@ export const metadata: Metadata = {
     "family medicine Ozone Park",
   ],
   openGraph: {
-    title: "About All Care Family Medicine | Queens & Long Island",
+    title: "About All Care Family Medicine",
     description:
-      "Board-certified family medicine providing preventive, patient-centered care across Queens and Long Island. Learn more about our practice and approach.",
-    url: "https://allcareamyfamilymedicine.com/about",
-    siteName: "All Care Family Medicine",
+      "Board-certified family medicine providing preventive, patient-centered care across Queens and Long Island.",
+    url: "/about",
+    siteName: site.name,
     locale: "en_US",
     type: "website",
+    images: ["/images/about.jpg"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About All Care Family Medicine | Queens & Long Island",
+    title: "About All Care Family Medicine",
     description:
       "Prevention-centered family medicine serving Queens and Long Island.",
+    images: ["/images/about.jpg"],
   },
   alternates: {
-    canonical: "https://allcarefamilymedicine.com/about",
+    canonical: "/about",
   },
   robots: {
     index: true,
@@ -54,10 +58,10 @@ export const metadata: Metadata = {
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalOrganization",
-  name: "All Care Family Medicine",
+  name: site.name,
   description:
-    "All Care Family Medicine is a board-certified family practice focused on accessible, prevention-centered primary care for patients of all ages across Queens and Long Island, NY.",
-  url: "https://allcarefamilymedicine.com/about",
+    "All Care Family Medicine, PC is a board-certified family practice focused on accessible, prevention-centered primary care for patients of all ages across Queens and Long Island, NY.",
+  url: `${site.url}/about`,
   medicalSpecialty: "Family Medicine",
   areaServed: [
     { "@type": "City", name: "Richmond Hill" },
@@ -199,6 +203,29 @@ function AboutBanner() {
             </li>
           </ol>
         </nav>
+
+        <div className="mt-6 max-w-3xl rounded-3xl border border-white/15 bg-white/10 px-4 py-4 text-left text-white shadow-lg backdrop-blur-md sm:px-6 sm:py-5">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-blue-100">
+            Practice information
+          </p>
+          <p className="mt-2 text-sm leading-6 text-white/90 sm:text-base">
+            All Care Family Medicine, PC provides prevention-centered family medicine for patients across Queens and Long Island.
+          </p>
+          <div className="mt-4 grid gap-3 sm:grid-cols-3">
+            <div className="rounded-2xl bg-white/10 px-4 py-3">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-100">Location</p>
+              <p className="mt-1 text-sm text-white/90">{site.address}</p>
+            </div>
+            <div className="rounded-2xl bg-white/10 px-4 py-3">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-100">Phone</p>
+              <p className="mt-1 text-sm text-white/90">{site.phone}</p>
+            </div>
+            <div className="rounded-2xl bg-white/10 px-4 py-3">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-100">Hours</p>
+              <p className="mt-1 text-sm text-white/90">{site.hours}</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div
@@ -346,6 +373,28 @@ export default function AboutPage() {
                   >
                     Contact the Practice
                   </a>
+                </div>
+
+                <div className="mt-8 rounded-3xl border border-slate-200 bg-white/80 p-5 shadow-sm backdrop-blur sm:mt-10 sm:p-6">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-600">
+                    Practice information
+                  </p>
+                  <div className="mt-4 grid gap-4 sm:grid-cols-3">
+                    <div>
+                      <p className="text-sm font-semibold text-slate-900">Location</p>
+                      <p className="mt-1 text-sm leading-6 text-slate-600">{site.address}</p>
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-slate-900">Phone</p>
+                      <a href={`tel:${site.phone}`} className="mt-1 inline-block text-sm leading-6 text-slate-600 transition hover:text-[#1677b9]">
+                        {site.phone}
+                      </a>
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-slate-900">Hours</p>
+                      <p className="mt-1 text-sm leading-6 text-slate-600">{site.hours}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -143,7 +143,7 @@ function AboutBanner() {
   return (
     <section
       aria-labelledby="about-banner-heading"
-      className="relative h-[420px] overflow-hidden sm:h-[480px] lg:h-[520px]"
+      className="relative h-[450px] overflow-hidden sm:h-[480px] lg:h-[520px]"
     >
       <Image
         src="/images/about.jpg"
@@ -208,21 +208,21 @@ function AboutBanner() {
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-blue-100">
             Practice information
           </p>
-          <p className="mt-2 text-sm leading-6 text-white/90 sm:text-base">
+          <p className="mt-2 sm:text-sm text-[12px] leading-6 text-white/90 sm:text-base">
             All Care Family Medicine, PC provides prevention-centered family medicine for patients across Queens and Long Island.
           </p>
           <div className="mt-4 grid gap-3 sm:grid-cols-3">
             <div className="rounded-2xl bg-white/10 px-4 py-3">
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-100">Location</p>
-              <p className="mt-1 text-sm text-white/90">{site.address}</p>
+              <p className="mt-1 text-[10px] text-white/90 sm:text-sm">{site.address}</p>
             </div>
             <div className="rounded-2xl bg-white/10 px-4 py-3">
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-100">Phone</p>
-              <p className="mt-1 text-sm text-white/90">{site.phone}</p>
+              <p className="mt-1 text-[10px] text-white/90 sm:text-sm">{site.phone}</p>
             </div>
             <div className="rounded-2xl bg-white/10 px-4 py-3">
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-blue-100">Hours</p>
-              <p className="mt-1 text-sm text-white/90">{site.hours}</p>
+              <p className="mt-1 text-[10px] text-white/90 sm:text-sm">{site.hours}</p>
             </div>
           </div>
         </div>
@@ -382,7 +382,7 @@ export default function AboutPage() {
                   <div className="mt-4 grid gap-4 sm:grid-cols-3">
                     <div>
                       <p className="text-sm font-semibold text-slate-900">Location</p>
-                      <p className="mt-1 text-sm leading-6 text-slate-600">{site.address}</p>
+                      <p className="mt-1 !text-[12px] text-[14px] leading-6 text-slate-600">{site.address}</p>
                     </div>
                     <div>
                       <p className="text-sm font-semibold text-slate-900">Phone</p>

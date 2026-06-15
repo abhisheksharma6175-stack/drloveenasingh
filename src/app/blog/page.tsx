@@ -1,14 +1,74 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { site } from "@/lib/site";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { PageBanner } from "@/components/PageBanner";
 import { SectionHeading } from "@/components/SectionHeading";
 import { posts } from "@/data/blog";
 
 export const metadata: Metadata = {
-  title: "Blog",
-  description: "Helpful primary care articles from All Care Family Medicine, PC."
+  metadataBase: new URL(site.url),
+
+  title: "Blog | All Care Family Medicine",
+
+  description:
+    "Read the latest healthcare articles, wellness tips, preventive care guidance, family medicine insights, and medical updates from All Care Family Medicine.",
+
+  keywords: [
+    "health blog",
+    "family medicine blog",
+    "preventive healthcare",
+    "wellness tips",
+    "medical articles",
+    "primary care blog",
+    "health screenings",
+    "family doctor advice",
+    "Queens healthcare",
+    "Long Island healthcare",
+  ],
+
+  openGraph: {
+    title: "Health & Wellness Blog | All Care Family Medicine",
+    description:
+      "Explore expert healthcare articles, preventive care tips, wellness guidance, and family medicine resources from All Care Family Medicine.",
+    url: "/blog",
+    siteName: site.name,
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/images/blog-banner.jpg",
+        width: 1200,
+        height: 630,
+        alt: "All Care Family Medicine Blog",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Health & Wellness Blog | All Care Family Medicine",
+    description:
+      "Expert healthcare articles, preventive care insights, and wellness resources from All Care Family Medicine.",
+    images: ["/images/blog-banner.jpg"],
+  },
+
+  alternates: {
+    canonical: "/blog",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function BlogPage() {

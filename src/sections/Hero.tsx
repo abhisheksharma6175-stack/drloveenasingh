@@ -23,7 +23,7 @@ const fadeUp = (delay = 0) => ({
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section className="relative min-h-[80svh] overflow-hidden sm:min-h-screen">
       {/* Background Image */}
       <Image
         src="/images/home-banner.jpg"
@@ -40,7 +40,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/60 to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 container-shell flex min-h-screen items-center py-20">
+      <div className="relative z-10 container-shell flex min-h-[80svh] items-center py-12 sm:min-h-screen sm:py-20">
         <div className="grid w-full gap-16 lg:grid-cols-[1fr_0.9fr]">
 
           {/* LEFT CONTENT */}
@@ -59,7 +59,7 @@ export function Hero() {
             {/* Heading */}
             <motion.h1
               {...fadeUp(0.1)}
-              className="mt-8 max-w-4xl text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl"
+              className="mt-8 max-w-4xl text-2xl font-bold leading-tight text-white md:text-6xl lg:text-7xl"
             >
               Preventive Healthcare
               <br />
@@ -73,7 +73,7 @@ export function Hero() {
             {/* Description */}
             <motion.p
               {...fadeUp(0.2)}
-              className="mt-6 max-w-xl text-lg leading-relaxed text-slate-200"
+              className="mt-6 max-w-xl text-sm leading-relaxed text-slate-200"
             >
               Dr. Loveena Singh provides annual wellness visits,
               screenings, vaccinations, medical exams, and
@@ -104,9 +104,9 @@ export function Hero() {
 
             {/* Stats */}
             <motion.div
-              {...fadeUp(0.4)}
-              className="mt-12 grid gap-4 sm:grid-cols-3"
-            >
+  {...fadeUp(0.4)}
+  className="hidden lg:grid mt-12 gap-4 lg:grid-cols-3"
+>
               <div className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur-md">
                 <FaUserMd className="mb-3 text-2xl text-cyan-300" />
                 <p className="text-xs uppercase tracking-wider text-slate-300">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { site } from "@/lib/site";
 import { posts } from "@/data/blog";
 
 type Props = {
@@ -19,14 +20,38 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {};
   }
 
+  const url = `/blog/${post.slug}`;
+
   return {
+    metadataBase: new URL(site.url),
     title: post.title,
     description: post.excerpt,
+    keywords: [
+      "health blog",
+      "family medicine blog",
+      "preventive healthcare",
+      "wellness tips",
+      post.title,
+    ],
+    alternates: {
+      canonical: url,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      images: [post.image]
-    }
+      url,
+      siteName: site.name,
+      locale: "en_US",
+      type: "article",
+      publishedTime: `${post.date}T00:00:00.000Z`,
+      images: [post.image],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [post.image],
+    },
   };
 }
 

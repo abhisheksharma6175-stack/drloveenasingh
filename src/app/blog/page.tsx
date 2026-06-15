@@ -10,7 +10,7 @@ import { posts } from "@/data/blog";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
 
-  title: "Blog | All Care Family Medicine",
+  title: { absolute: "Blog" },
 
   description:
     "Read the latest healthcare articles, wellness tips, preventive care guidance, family medicine insights, and medical updates from All Care Family Medicine.",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Health & Wellness Blog | All Care Family Medicine",
     description:
-      "Expert healthcare articles, preventive care insights, and wellness resources from All Care Family Medicine.",
+      "Explore expert healthcare articles, preventive care tips, wellness guidance, and family medicine resources from All Care Family Medicine.",
     images: ["/images/blog-banner.jpg"],
   },
 

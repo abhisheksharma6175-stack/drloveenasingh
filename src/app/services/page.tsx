@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <main>
-      <PageBanner title="Services" imageSrc="/images/consult.jpg" />
+      <PageBanner title="Services" imageSrc="/images/service.jpg" />
       <AnimatedSection className="section-padding bg-[#f8fbff]">
         <div className="container-shell">
           <SectionHeading

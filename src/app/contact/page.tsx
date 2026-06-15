@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main>
-      <PageBanner title="Contact" imageSrc="/images/medical-room.jpg" />
+      <PageBanner title="Contact" imageSrc="/images/contact-banner.jpg" />
       <AnimatedSection className="section-padding bg-white">
         <div className="container-shell grid gap-10 lg:grid-cols-[0.86fr_1fr]">
         <SectionHeading

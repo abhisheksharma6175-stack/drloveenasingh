@@ -359,7 +359,7 @@ export default function AboutPage() {
                 {/* CTAs */}
                 <div className="mt-8 flex flex-col gap-3 xs:flex-row xs:flex-wrap sm:mt-10">
                   <a
-                    href="/appointment"
+                    href="/contact"
                     className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#1677b9] px-5 py-3 text-sm font-semibold text-white shadow-md shadow-blue-600/20 transition hover:bg-[#1677b9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 xs:w-auto xs:px-6"
                   >
                     Book an Appointment
@@ -434,11 +434,7 @@ export default function AboutPage() {
             >
               Our approach to care
             </h2>
-            {/*
-              Mobile:  1 column
-              sm:      2 columns
-              lg:      4 columns
-            */}
+            
             <div className="grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
               {approachCards.map((card) => (
                 <div

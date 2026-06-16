@@ -141,7 +141,7 @@ export function TeamPageClient() {
 
                 <div className="flex flex-col justify-center px-7 py-8 sm:px-10 sm:py-10">
                   <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#11a6a6]">
-                    All Care Family Medicine
+                    All Care Family Medicine, PC
                   </p>
                   <h2 className="mt-2 font-[var(--font-serif)] text-3xl font-semibold text-slate-950">
                     {member.name}

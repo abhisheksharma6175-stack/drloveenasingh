@@ -11,7 +11,8 @@ export function PageBanner({ title, imageSrc, eyebrow = title }: PageBannerProps
   return (
     <section
       aria-labelledby="page-banner-heading"
-      className="relative h-[360px] overflow-hidden sm:h-[420px] lg:h-[470px]"
+      className="relative h-[360px] overflow-hidden sm:h-[420px] lg:h-[
+      ]"
     >
       <Image
         src={imageSrc}

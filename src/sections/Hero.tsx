@@ -50,7 +50,7 @@ export function Hero() {
             <motion.div {...fadeUp(0)}>
               <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2 backdrop-blur-md">
                 <FaAward className="text-cyan-300" />
-                <span className="text-sm font-medium text-white">
+                <span className="text-[12px] sm:text-sm  font-medium text-white">
                   Preventive Medicine & Family Care
                 </span>
               </div>

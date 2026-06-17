@@ -30,7 +30,7 @@ export function AboutPreview() {
             About the Doctor
           </p>
 
-          <h2 className="mt-4 font-[var(--font-serif)] text-3xl font-semibold text-slate-950 sm:text-4xl">
+          <h2 className="mt-4 font-[var(--font-serif)] text-xl font-semibold text-slate-950 sm:text-4xl">
             A prevention-focused medical partner for every stage of family life.
           </h2>
         </div>
@@ -167,7 +167,7 @@ export function AppointmentCta() {
             Appointments
           </p>
 
-          <h2 className="mt-3 font-[var(--font-serif)] text-3xl font-semibold sm:text-4xl">
+          <h2 className="mt-3 font-[var(--font-serif)] text-xl font-semibold sm:text-4xl">
             Ready to plan your preventive care visit?
           </h2>
 

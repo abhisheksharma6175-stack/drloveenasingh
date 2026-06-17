@@ -143,10 +143,10 @@ export function TeamPageClient() {
                   <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#11a6a6]">
                     All Care Family Medicine, PC
                   </p>
-                  <h2 className="mt-2 font-[var(--font-serif)] text-3xl font-semibold text-slate-950">
+                  <h2 className="mt-2 font-[var(--font-serif)] text-lg md:text-3xl sm:text-2xl font-semibold text-slate-950">
                     {member.name}
                   </h2>
-                  <p className="mt-2 text-base font-semibold text-[#1677b9]">{member.role}</p>
+                  <p className="mt-2 text-base font-semibold text-[#1677b9] text-sm md:text-3xl sm:text-2xl">{member.role}</p>
                   <p className="mt-5 max-w-3xl text-base leading-7 text-slate-600">
                     {member.description}
                   </p>
@@ -187,8 +187,8 @@ export function TeamPageClient() {
           >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <h2 className="text-3xl font-bold text-slate-900">{selectedMember.name}</h2>
-                <p className="mt-2 text-lg font-medium text-[#1677b9]">{selectedMember.role}</p>
+                <h2 className="text-md sm:text-2xl md:text-3xl lg:text-3xl font-bold text-slate-900">{selectedMember.name}</h2>
+                <p className="mt-2 text-sm font-medium text-[#1677b9]">{selectedMember.role}</p>
               </div>
 
               <button

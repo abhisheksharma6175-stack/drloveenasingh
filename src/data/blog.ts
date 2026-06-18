@@ -6,7 +6,7 @@ export const posts = [
       "Learn which foods and drinks can help support hydration, soothe symptoms, and make recovery a little easier when you are under the weather.",
     date: "2026-06-17",
     readTime: "7 min read",
-    image: "/images/food-blog.png",
+    image: "/images/food-blog.jpg",
     content: [
       {
         type: "lead",

@@ -13,7 +13,6 @@ import { GalleryGrid } from "@/components/GalleryGrid";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceCard } from "@/components/ServiceCard";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
-
 import { posts } from "@/data/blog";
 import { services } from "@/data/services";
 import { site } from "@/lib/site";

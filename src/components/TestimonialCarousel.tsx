@@ -69,8 +69,12 @@ export function TestimonialCarousel() {
           className="focus-ring flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-800 transition hover:border-[#1677b9] hover:text-[#1677b9]"
         >
           <FaChevronRight aria-hidden />
+          
         </button>
       </div>
     </div>
   );
 }
+<h1>
+  
+</h1>

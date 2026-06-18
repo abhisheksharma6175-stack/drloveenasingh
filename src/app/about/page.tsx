@@ -209,7 +209,7 @@ function AboutBanner() {
             Practice information
           </p>
           <p className="mt-2 sm:text-sm text-[12px] leading-6 text-white/90 sm:text-base">
-            All Care Family Medicine, PC provides prevention-centered family medicine for patients across Queens and Long Island.
+             All Care Family Medicine, PC provides prevention-centered family medicine for patients across Queens and Long Island.
           </p>
           <div className="mt-4 grid gap-3 sm:grid-cols-3">
             <div className="rounded-2xl bg-white/10 px-4 py-3">

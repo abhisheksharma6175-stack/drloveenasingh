@@ -47,13 +47,26 @@ export function Hero() {
           <div className="flex flex-col justify-center">
 
             {/* Badge */}
-            <motion.div {...fadeUp(0)}>
+            <motion.div {...fadeUp(0)} className="flex flex-wrap items-center gap-3">
               <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2 backdrop-blur-md">
                 <FaAward className="text-cyan-300" />
                 <span className="text-[12px] sm:text-sm  font-medium text-white">
                   Preventive Medicine & Family Care
                 </span>
               </div>
+              <motion.div
+                className="inline-flex shrink-0 self-center origin-center"
+                animate={{ scale: [1, 1.06, 1] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <Link
+                  href="/our-commitment"
+                  className="focus-ring group inline-flex items-center gap-2 rounded-full border border-cyan-300/50 bg-cyan-300/15 px-5 py-2 text-[12px] font-semibold text-cyan-100 backdrop-blur-md transition duration-300 hover:-translate-y-0.5 hover:border-cyan-200 hover:bg-cyan-300 hover:text-slate-950 sm:text-sm"
+                >
+                  Patient-Centered Medical Home
+                
+                </Link>
+              </motion.div>
             </motion.div>
 
             {/* Heading */}

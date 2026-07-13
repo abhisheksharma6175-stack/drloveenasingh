@@ -159,7 +159,7 @@ export function Hero() {
               </div>
 
               {/* Floating Card 1 */}
-              <div className="absolute -left-16 top-16 rounded-3xl bg-white p-5 shadow-xl">
+              <div className="absolute left-1/2 top-0 z-10 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-3xl bg-white p-5 shadow-xl">
                 <p className="text-xs text-slate-500">
                   ACCEPTING PATIENTS
                 </p>
@@ -169,7 +169,7 @@ export function Hero() {
               </div>
 
               {/* Floating Card 2 */}
-              <div className="absolute -right-10 bottom-24 rounded-3xl bg-white p-5 shadow-xl">
+              <div className="absolute bottom-0 left-1/2 z-10 -translate-x-1/2 translate-y-1/2 whitespace-nowrap rounded-3xl bg-white p-5 shadow-xl">
                 <div className="flex items-center gap-3">
                   <div className="rounded-full bg-emerald-100 p-3">
                     <FaCalendarCheck className="text-emerald-600" />

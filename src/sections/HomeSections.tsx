@@ -55,6 +55,55 @@ export function AboutPreview() {
   );
 }
 
+// ================= PCMH OVERVIEW =================
+
+export function PcmhOverview() {
+  const principles = [
+    "Care coordinated around your needs",
+    "Prevention and wellness at every stage",
+    "Clear communication and shared decisions",
+  ];
+
+  return (
+    <AnimatedSection className="section-padding bg-[#f8fbff]">
+      <div className="container-shell grid items-center gap-10 lg:grid-cols-[0.9fr_1fr]">
+        <div>
+          <p className="inline-flex rounded-full bg-teal-100 px-4 py-2 text-xs font-bold tracking-[0.16em] text-teal-800">
+            PCMH-ALIGNED CARE
+          </p>
+          <h2 className="mt-5 font-[var(--font-serif)] text-3xl font-semibold leading-tight text-slate-950 sm:text-5xl">
+            Patient-centered care, designed around you.
+          </h2>
+          <p className="mt-5 max-w-xl text-lg leading-8 text-slate-600">
+            Our approach reflects Patient-Centered Medical Home principles: a connected care team, proactive prevention, and support that helps make each next step clearer.
+          </p>
+          <div className="mt-7">
+            <CtaButton href="/our-commitment" variant="secondary">
+              Explore Our Commitment
+            </CtaButton>
+          </div>
+        </div>
+
+        <div className="group relative overflow-hidden rounded-3xl border border-teal-100 bg-white p-7 shadow-lg shadow-slate-200/50 transition-all duration-500 ease-out hover:-translate-y-2 hover:border-teal-300 hover:shadow-2xl hover:shadow-teal-200/70 sm:p-9">
+          <div aria-hidden className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-teal-200/40 blur-3xl transition-transform duration-700 ease-out group-hover:scale-150 group-hover:bg-cyan-200/60" />
+          <div className="relative flex items-center gap-4">
+            <span className="rounded-xl bg-teal-700 px-3 py-2 text-sm font-black tracking-[0.14em] text-white shadow-md shadow-teal-700/20 transition-transform duration-500 ease-out group-hover:scale-110 group-hover:-rotate-3">PCMH</span>
+            <p className="font-semibold text-slate-900 transition-colors duration-300 group-hover:text-teal-800">Patient-Centered Medical Home principles</p>
+          </div>
+          <ul className="relative mt-7 space-y-4">
+            {principles.map((principle) => (
+              <li key={principle} className="flex items-start gap-3 text-slate-700 transition-transform duration-300 ease-out group-hover:translate-x-1">
+                <FaCheckCircle className="mt-0.5 shrink-0 text-lg text-teal-600 transition-transform duration-300 group-hover:scale-110" aria-hidden />
+                <span className="font-medium">{principle}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </AnimatedSection>
+  );
+}
+
 // ================= SERVICES =================
 
 export function ServicesPreview() {

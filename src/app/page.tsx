@@ -5,6 +5,7 @@ import {
   ContactSection,
   FaqSection,
   GalleryPreview,
+  PcmhOverview,
   ServicesPreview,
   TestimonialsSection,
   WhyChooseUs
@@ -16,7 +17,8 @@ export default function HomePage() {
     <>
       <Hero />
       <AboutPreview />
-       <ServicesPreview />
+      <PcmhOverview />
+      <ServicesPreview />
       <WhyChooseUs />
       <AppointmentCta />
       <TestimonialsSection />

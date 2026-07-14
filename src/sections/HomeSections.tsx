@@ -11,6 +11,7 @@ import {
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { CtaButton } from "@/components/CtaButton";
 import { GalleryGrid } from "@/components/GalleryGrid";
+import { PcmhPosterButton } from "@/components/PcmhPosterButton";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceCard } from "@/components/ServiceCard";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
@@ -48,13 +49,7 @@ export function AboutPreview() {
             <CtaButton href="/about" variant="secondary">
               Learn About Dr. Singh
             </CtaButton>
-            <CtaButton
-              href="/images/ACFM%20PC%20Brochure%20%202025%20.pdf.pdf"
-              variant="secondary"
-              target="_blank"
-            >
-              View PCMH Brochure
-            </CtaButton>
+            <PcmhPosterButton />
           </div>
         </div>
 

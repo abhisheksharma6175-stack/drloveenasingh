@@ -5,11 +5,13 @@ import { FaArrowRight } from "react-icons/fa";
 export function CtaButton({
   href,
   children,
-  variant = "primary"
+  variant = "primary",
+  target
 }: {
   href: string;
   children: ReactNode;
   variant?: "primary" | "secondary";
+  target?: "_blank";
 }) {
   const classes =
     variant === "primary"
@@ -19,6 +21,8 @@ export function CtaButton({
   return (
     <Link
       href={href}
+      target={target}
+      rel={target === "_blank" ? "noopener noreferrer" : undefined}
       className={`focus-ring inline-flex h-12 items-center justify-center gap-2 rounded-full px-6 text-sm font-semibold transition ${classes}`}
     >
       {children}

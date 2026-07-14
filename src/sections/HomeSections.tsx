@@ -27,26 +27,33 @@ export function AboutPreview() {
 
         <div className="rounded-3xl bg-[#eaf6fb] p-8">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#1677b9]">
-            About the Doctor
+            About Dr. Singh & PCMH Care
           </p>
 
           <h2 className="mt-4 font-[var(--font-serif)] text-xl font-semibold text-slate-950 sm:text-4xl">
-            A prevention-focused medical partner for every stage of family life.
+            Personalized care, connected through the PCMH model.
           </h2>
         </div>
 
         <div>
           <p className="text-lg leading-8 text-slate-600">
-            Dr. Loveena Singh is a board-certified family physician focused on
-            preventive medicine, early detection, and practical long-term health
-            planning. Her team supports wellness visits, medical exams,
-            vaccinations, screenings, and ongoing health management with clear
-            communication and patient-first service.
+            Dr. Loveena Singh is a board-certified family physician who combines
+            preventive medicine with Patient-Centered Medical Home (PCMH) care.
+            Her team works with you to coordinate visits, screenings,
+            vaccinations, and ongoing health needs—so every step of your care is
+            personal, connected, and easier to understand.
           </p>
 
-          <div className="mt-7">
+          <div className="mt-7 flex flex-wrap gap-3">
             <CtaButton href="/about" variant="secondary">
               Learn About Dr. Singh
+            </CtaButton>
+            <CtaButton
+              href="/images/ACFM%20PC%20Brochure%20%202025%20.pdf.pdf"
+              variant="secondary"
+              target="_blank"
+            >
+              View PCMH Brochure
             </CtaButton>
           </div>
         </div>

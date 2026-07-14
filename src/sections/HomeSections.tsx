@@ -113,7 +113,7 @@ export function PcmhOverview() {
             className="relative mt-7 inline-flex items-center gap-2 rounded-xl border border-teal-200 bg-teal-50 px-4 py-3 text-sm font-bold text-teal-800 transition duration-300 hover:-translate-y-0.5 hover:border-teal-300 hover:bg-teal-100"
           >
             <FaFilePdf className="text-base" aria-hidden />
-            View PCMH Patient Information
+            View PCMH  Information
           </Link>
         </div>
       </div>

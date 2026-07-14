@@ -49,7 +49,6 @@ export function AboutPreview() {
             <CtaButton href="/about" variant="secondary">
               Learn About Dr. Singh
             </CtaButton>
-            <PcmhPosterButton />
           </div>
         </div>
 
@@ -101,15 +100,18 @@ export function PcmhOverview() {
               </li>
             ))}
           </ul>
-          <Link
-            href="/images/PCMH%20TC09_%20Patient%20Information%20(3).pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative mt-7 inline-flex items-center gap-2 rounded-xl border border-teal-200 bg-teal-50 px-4 py-3 text-sm font-bold text-teal-800 transition duration-300 hover:-translate-y-0.5 hover:border-teal-300 hover:bg-teal-100"
-          >
-            <FaFilePdf className="text-base" aria-hidden />
-            View PCMH  Information
-          </Link>
+          <div className="relative mt-7 flex flex-wrap items-center gap-3">
+            <Link
+              href="/images/PCMH%20TC09_%20Patient%20Information%20(3).pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-xl border border-teal-200 bg-teal-50 px-4 py-3 text-sm font-bold text-teal-800 transition duration-300 hover:-translate-y-0.5 hover:border-teal-300 hover:bg-teal-100"
+            >
+              <FaFilePdf className="text-base" aria-hidden />
+              View PCMH Information
+            </Link>
+            <PcmhPosterButton />
+          </div>
         </div>
       </div>
     </AnimatedSection>

@@ -164,7 +164,7 @@ export function Hero() {
             >
               <div className="relative h-[650px] w-[450px] overflow-hidden rounded-[32px] border border-white/20 shadow-2xl">
                 <Image
-                  src="/images/loveena-singh.jpg"
+                  src="/images/loveena-singh.jpeg"
                   alt="Dr Loveena Singh"
                   fill
                   className="object-cover"

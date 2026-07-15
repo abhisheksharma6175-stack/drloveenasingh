@@ -11,7 +11,7 @@ const teamMembers = [
   {
     name: "Dr. Loveena Singh",
     role: "Medical Director",
-    image: "/images/loveena-singh.jpg",
+    image: "/images/loveena-singh.jpeg",
     initials: "LS",
     description:
       "Dr. Loveena Singh provides prevention-centered family medicine with careful listening, clear guidance, and practical next steps for patients of all ages.",
